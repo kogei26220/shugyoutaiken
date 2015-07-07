@@ -72,3 +72,4 @@ Writing objects: 100% (4/4), 398 bytes, done.
 Total 4 (delta 0), reused 0 (delta 0)
 To git@github.com:ksksue/moemoe.git
 9681b04..d9837c6 master -> master
+$ git commit
