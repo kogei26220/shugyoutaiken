@@ -1,6 +1,6 @@
 $ cd moemoe
 $ ls -aF
-.git/
-.gitignore
-LICENSE
-README.md
+$.git/
+$.gitignore
+&LICENSE
+&README.md
