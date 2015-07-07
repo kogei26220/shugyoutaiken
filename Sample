@@ -1,6 +1,74 @@
+$ git clone git@github.com:ksksue/moemoe.git
 $ cd moemoe
 $ ls -aF
-$.git/
-$.gitignore
-&LICENSE
-&README.md
+.git/
+.gitignore
+LICENSE
+README.md
+$ git status
+# On branch master
+nothing to commit, working directory clean
+$ cp ~/Workspace/moemoe/* .
+$ ls -aF
+.git/
+.gitignore
+LICENSE
+README.md
+dere.v
+tsun.v
+$ git status ― (a)
+# On branch master
+# Untracked files:
+# (use “git add …” to include in what will be committed)
+#
+# dere.v
+# tsun.v
+nothing added to commit but untracked files present (use “git add” to track)
+$ git add . 
+$ git status
+# On branch master
+# Changes to be committed:
+# (use “git reset HEAD …” to unstage)
+#
+# 新規ファイル: dere.v
+# 新規ファイル: tsun.v
+#
+$ git commit -m “Added verilog files” 
+[master b21a97c] First Commit
+2 files changed, 2 insertions(+)
+create mode 100644 dere.v
+create mode 100644 tsun.v
+    $ git log
+    commit b21a97c3d8540aece9a407ae761dfaa655cb16a5
+    Author: Keisuke SUZUKI <ksksue@gmail.com>
+    Date: Sat Nov 30 17:55:00 2013 +0900
+
+    Added verilog files
+
+    commit 9681b04b2f79b8b68c392316e296e732f630ad01
+    Author: Keisuke SUZUKI <ksksue@gmail.com>
+    Date: Fri Nov 29 23:50:31 2013 -0800
+
+    Initial commit
+    $ git status
+# On branch master
+# このブランチは ‘origin/master’ よりも1コミット進んでいます。
+# (use “git push” to publish your local commits)
+#
+nothing to commit, working directory clean
+# git reset HEAD^ 
+$ git status
+(a)と同じメッセージ
+$ git log –oneline
+9681b04 Initial commit
+$ git add .
+$ git commit -m “Added verilog files”
+$ git push 
+Enter passphrase for key ‘/home/keisuke/.ssh/id_rsa’:
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 398 bytes, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To git@github.com:ksksue/moemoe.git
+9681b04..d9837c6 master -> master
