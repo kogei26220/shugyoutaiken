@@ -1,0 +1,10 @@
+$ sudo yum -y install git
+$ git clone https://github.com/ユーザー名/sample.git
+$ cd sample
+$ vi hello.txt
+$ git add hello.txt
+$ git commit -m 'ファイルを追加'
+$ git push
+$ vi .git/config
+url = https://ユーザー名@github.com/yk5656/sample.git
+$ git push
